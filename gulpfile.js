@@ -12,6 +12,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const beeper = require('beeper');
 const fs = require('fs');
+const sass = require('gulp-sass')(require('sass'));
 
 // postcss plugins
 const autoprefixer = require('autoprefixer');
@@ -47,6 +48,19 @@ function hbs(done) {
 function css(done) {
     pump([
         src('assets/css/*.css', {sourcemaps: true}),
+        postcss([
+            easyimport,
+            colorFunction(),
+            autoprefixer(),
+            cssnano()
+        ]),
+        dest('assets/built/', {sourcemaps: '.'}),
+        livereload()
+    ], handleError(done));
+    
+    pump([
+        src('assets/css/*.scss', {sourcemaps: true}),
+        sass().on('error', sass.logError),
         postcss([
             easyimport,
             colorFunction(),

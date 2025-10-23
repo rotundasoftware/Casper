@@ -2,40 +2,17 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-<div class="site-header-content outer{{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}}">
-
-    {{#if @custom.show_publication_cover}}
-        {{#if @site.cover_image}}
-            {{!-- This is a responsive image, it loads different sizes depending on device
-            https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
-            <img class="site-header-cover"
-                srcset="{{img_url @site.cover_image size="s"}} 300w,
-                        {{img_url @site.cover_image size="m"}} 600w,
-                        {{img_url @site.cover_image size="l"}} 1000w,
-                        {{img_url @site.cover_image size="xl"}} 2000w"
-                sizes="100vw"
-                src="{{img_url @site.cover_image size="xl"}}"
-                alt="{{@site.title}}"
-            />
-        {{/if}}
-    {{/if}}
-
-    {{#match @custom.header_style "!=" "Hidden"}}
-        <div class="site-header-inner inner">
-            {{#match @custom.navigation_layout "Logo on cover"}}
-                {{#if @site.logo}}
-                    <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
-                {{else}}
-                    <h1 class="site-title">{{@site.title}}</h1>
-                {{/if}}
-            {{/match}}
-            {{#if @site.description}}
-                <p class="site-description">{{@site.description}}</p>
-            {{/if}}
-        </div>
-    {{/match}}
-
-</div>
+<section id="resources-hero">
+    <div class="resources-hero-content">
+        <svg width="110" height="111" viewBox="0 0 110 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M81.5 26.1568L39.5 26.1568C37.2909 26.1568 35.5 27.9477 35.5 30.1568L35.5 68.8616L30 85.2534L81.5 85.2534C83.7091 85.2534 85.5 83.4625 85.5 81.2534L85.5 30.1568C85.5 27.9477 83.7091 26.1568 81.5 26.1568Z" fill="white"/>
+            <rect opacity="0.3" x="44.3545" y="35.8624" width="32.0882" height="5.27739" rx="2.63869" fill="#4074F2"/>
+            <rect opacity="0.3" x="44.3545" y="47.1398" width="22.3442" height="5.27739" rx="2.63869" fill="#4074F2"/>
+            <path d="M35.5 45.1367L28.5 45.1367C26.2909 45.1367 24.5 46.9276 24.5 49.1367L24.5 79.7534C24.5 82.7909 26.9624 85.2534 30 85.2534C33.0376 85.2534 35.5 82.7909 35.5 79.7534L35.5 45.1367Z" fill="#84A6F9"/>
+        </svg>
+        <h1 class="resources-hero-title heading-2">Blog</h1>
+    </div>
+</section>
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
