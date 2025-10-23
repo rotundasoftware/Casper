@@ -23,7 +23,8 @@
     "postship": "git fetch && gulp release"
   },
   "author": {
-    "name": "Ghost Foundation",
+    "name": "Rotunda Software",
+    "email": "devops@rotundasoftware.com",
     "url": "https://github.com/rotundasoftware/casper"
   },
   "gpm": {
@@ -119,16 +120,6 @@
       "show_publication_cover": {
         "type": "boolean",
         "default": true,
-        "group": "homepage"
-      },
-      "header_style": {
-        "type": "select",
-        "options": [
-          "Center aligned",
-          "Left aligned",
-          "Hidden"
-        ],
-        "default": "Center aligned",
         "group": "homepage"
       },
       "feed_layout": {
