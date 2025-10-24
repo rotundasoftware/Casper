@@ -651,8 +651,12 @@ footer#footer {
 section#resources-hero {
 	--resources-hero-background: linear-gradient(0deg, #467EF4, #3E70F2) !important;
 
+	display: flex;
 	position: relative;
+	align-items: center;
+	min-height: 320px;
 	padding: 22px 35px 64px 35px;
+	overflow: hidden;
 	color: var(--unison-color-white);
 	background:
 		url("../images/terrain-left.svg") left bottom no-repeat,
@@ -720,6 +724,7 @@ section#resources-hero {
 
 	div.resources-hero-content {
 		display: flex;
+		flex: 1;
 		flex-direction: column;
 		align-items: center;
 		padding: 27px 0;
@@ -730,7 +735,7 @@ section#resources-hero {
 			margin-top: 15px;
 			margin-bottom: 0;
 			font-weight: 600;
-			font-size: 36px;
+			font-size: 44px;
 			line-height: 1.5;
 			letter-spacing: normal;
 			
@@ -747,8 +752,5 @@ section#resources-hero {
 
 // Site content
 .site-content {
-	margin-bottom: 40px;
-}
-.post-feed {
-	padding-top: 40px;
+	margin-bottom: 5vw;
 }
