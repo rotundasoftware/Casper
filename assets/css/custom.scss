@@ -729,6 +729,7 @@ footer#footer {
 		}
 		
 		.post-card-content {
+			gap: 6px;
 			grid-column: span 3;
 
 			.post-card-tags {
@@ -755,8 +756,7 @@ footer#footer {
 
 		.post-card-meta {
 			margin-top: auto;
-			margin-bottom: 18px;
-			line-height: 1;
+			margin-bottom: 12px;
 		}
 	}
 }
