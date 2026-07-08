@@ -764,6 +764,8 @@ footer#footer {
 
 // Article
 .article {
+	padding-bottom: 50px !important;
+
 	.article-tag {
 		color: var(--gray700);
 		font-weight: 600;
@@ -837,5 +839,41 @@ footer#footer {
 	.blog-cta-button {
 		justify-self: center;
 		margin-top: 40px;
+	}
+}
+
+
+// Post prev/next navigation
+.post-nav {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+	padding: 0 10px;
+
+	.post-nav-link {
+		font-size: 1.8rem;
+		font-weight: 800;
+		color: var(--unison-color-primary);
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		&.disabled {
+			color: var(--gray500);
+			pointer-events: none;
+		}
+	}
+
+	.post-nav-prev {
+		i {
+			margin-right: 12px;
+		}
+	}
+
+	.post-nav-next {
+		i {
+			margin-left: 12px;
+		}
 	}
 }
