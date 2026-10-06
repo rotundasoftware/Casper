@@ -22,6 +22,11 @@
     
     <script src="https://kit.fontawesome.com/a8f3e4baad.js" crossorigin="anonymous"></script>
 
+    {{!-- No-index for author pages --}}
+    {{#is "author"}}
+        <meta name="robots" content="noindex,follow">
+    {{/is}}
+
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag --}}
     {{ghost_head}}
